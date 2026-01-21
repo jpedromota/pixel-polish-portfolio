@@ -56,11 +56,11 @@ export const Footer = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span>contato@joaopedromota.com</span>
+                  <span>jpedromota.7@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span>São Paulo, Brasil</span>
+                  <span>Juiz de Fora - MG, Brasil</span>
                 </div>
               </div>
             </MotionWrapper>
