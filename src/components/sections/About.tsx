@@ -46,18 +46,17 @@ export const About = () => {
 
             <MotionWrapper delay={0.2}>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Sou um Web Designer apaixonado por criar interfaces intencionais
-                que não apenas impressionam visualmente, mas que também geram
-                resultados tangíveis para negócios.
+                Meu trabalho une a sensibilidade, a estratégia e a agilidade do
+                Social Media à precisão do "Vibe Coding". Mais do que entregar
+                apenas arquivos, foco em construir um ecossistema visual
+                completo e funcional para o seu negócio.
               </p>
             </MotionWrapper>
 
             <MotionWrapper delay={0.3}>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Minha abordagem combina estética funcional com experiência do
-                usuário estratégica. Cada projeto é tratado como uma oportunidade
-                de criar algo único que conecta marcas aos seus públicos de
-                forma autêntica e eficaz.
+              <p className="text-muted-foreground leading-relaxed mb-8 font-medium text-foreground/80">
+                Deixar seu projeto na mão de quem não entende essa integração é
+                um risco que seu negócio não precisa correr.
               </p>
             </MotionWrapper>
 

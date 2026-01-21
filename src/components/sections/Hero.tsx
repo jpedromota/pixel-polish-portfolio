@@ -40,10 +40,11 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6"
           >
-            Design que{" "}
-            <span className="text-gradient">transforma</span>
+            <span className="text-gradient">Design Estratégico</span> para marcas
             <br />
-            visitantes em clientes
+            que entendem que aparecer é comum,
+            <br />
+            mas se conectar é essencial.
           </motion.h1>
 
           <motion.p
@@ -52,10 +53,10 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Crio interfaces intencionais que combinam{" "}
-            <span className="text-foreground">estética funcional</span> e{" "}
-            <span className="text-foreground">experiência do usuário</span> para gerar
-            resultados reais para o seu negócio.
+            Transformando ideias em experiências memoráveis através de um{" "}
+            <span className="text-foreground">design estratégico</span>, focado em{" "}
+            <span className="text-foreground">conversão</span> e{" "}
+            <span className="text-foreground">refinamento técnico</span>.
           </motion.p>
 
           <motion.div
