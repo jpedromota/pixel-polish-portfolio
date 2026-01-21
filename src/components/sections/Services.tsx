@@ -1,33 +1,26 @@
-import { Monitor, Rocket, Film, Code } from "lucide-react";
+import { Monitor, Rocket, Code } from "lucide-react";
 import { MotionWrapper, MotionStagger, MotionItem } from "@/components/ui/motion-wrapper";
 
 const services = [
   {
     icon: Monitor,
-    title: "Web Design",
+    title: "Web Design & Landing Pages",
     description:
-      "Interfaces modernas e funcionais que capturam a essência da sua marca e proporcionam experiências memoráveis aos usuários.",
-    features: ["UI/UX Design", "Prototipagem", "Design Systems"],
+      "Interfaces estratégicas e páginas de alta conversão que capturam a essência da sua marca e transformam visitantes em clientes.",
+    features: ["UI/UX Design", "Alta Conversão", "Design Systems"],
   },
   {
     icon: Rocket,
-    title: "Landing Pages",
+    title: "Social Media & Artes Estáticas",
     description:
-      "Páginas de alta conversão otimizadas para transformar visitantes em leads qualificados e clientes fiéis.",
-    features: ["Copywriting", "A/B Testing", "Otimização de Conversão"],
-  },
-  {
-    icon: Film,
-    title: "Motion Design",
-    description:
-      "Animações e micro-interações que trazem vida às interfaces, criando experiências mais envolventes e dinâmicas.",
-    features: ["Animações", "Transições", "Efeitos Visuais"],
+      "Identidade visual consistente para suas redes sociais, com artes que comunicam e engajam seu público de forma autêntica.",
+    features: ["Feed Design", "Stories", "Carrosséis"],
   },
   {
     icon: Code,
-    title: "Implementação Web",
+    title: "Performance & Vibe Coding",
     description:
-      "Design implementado com performance e organização, garantindo que sua interface funcione perfeitamente.",
+      "Código limpo e organizado como diferencial de bastidor, garantindo que seu design funcione com velocidade e precisão técnica.",
     features: ["Performance", "Responsividade", "Otimização"],
   },
 ];
