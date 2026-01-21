@@ -30,7 +30,7 @@ export const Hero = () => {
           >
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">
-              Web Designer & Desenvolvedor Frontend
+              Web Designer
             </span>
           </motion.div>
 
@@ -52,9 +52,9 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Crio experiências digitais estratégicas que combinam{" "}
-            <span className="text-foreground">design intencional</span> e{" "}
-            <span className="text-foreground">código limpo</span> para gerar
+            Crio interfaces intencionais que combinam{" "}
+            <span className="text-foreground">estética funcional</span> e{" "}
+            <span className="text-foreground">experiência do usuário</span> para gerar
             resultados reais para o seu negócio.
           </motion.p>
 

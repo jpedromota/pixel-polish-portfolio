@@ -9,8 +9,8 @@ const highlights = [
   },
   {
     icon: Code2,
-    title: "Código Limpo",
-    description: "Performance e manutenibilidade garantidas",
+    title: "Performance Garantida",
+    description: "Interfaces rápidas e bem estruturadas",
   },
   {
     icon: Target,
@@ -46,18 +46,18 @@ export const About = () => {
 
             <MotionWrapper delay={0.2}>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Sou um Web Designer e Desenvolvedor Frontend apaixonado por criar
-                interfaces que não apenas impressionam visualmente, mas que
-                também geram resultados tangíveis para negócios.
+                Sou um Web Designer apaixonado por criar interfaces intencionais
+                que não apenas impressionam visualmente, mas que também geram
+                resultados tangíveis para negócios.
               </p>
             </MotionWrapper>
 
             <MotionWrapper delay={0.3}>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Minha abordagem combina design estratégico com desenvolvimento
-                técnico de alta qualidade. Cada projeto é tratado como uma
-                oportunidade de criar algo único que conecta marcas aos seus
-                públicos de forma autêntica e eficaz.
+                Minha abordagem combina estética funcional com experiência do
+                usuário estratégica. Cada projeto é tratado como uma oportunidade
+                de criar algo único que conecta marcas aos seus públicos de
+                forma autêntica e eficaz.
               </p>
             </MotionWrapper>
 

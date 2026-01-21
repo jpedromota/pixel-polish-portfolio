@@ -4,31 +4,31 @@ import { MotionWrapper, MotionStagger, MotionItem } from "@/components/ui/motion
 const projects = [
   {
     title: "Fintech Dashboard",
-    category: "Web App • UI/UX",
+    category: "Web Design • UI/UX",
     description: "Dashboard moderno para gestão financeira com visualizações de dados interativas.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    tags: ["React", "TypeScript", "D3.js"],
+    tags: ["UI Design", "UX", "Data Viz"],
   },
   {
     title: "E-commerce Premium",
     category: "Landing Page • Conversão",
     description: "Loja virtual de alta conversão para marca de produtos premium.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    tags: ["Next.js", "Stripe", "Tailwind"],
+    tags: ["Web Design", "UX", "Conversão"],
   },
   {
     title: "SaaS Marketing",
     category: "Landing Page • Motion",
     description: "Página de vendas animada com storytelling visual impactante.",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop",
-    tags: ["Framer Motion", "GSAP", "React"],
+    tags: ["Motion Design", "UX", "Animações"],
   },
   {
     title: "Portfolio Criativo",
     category: "Web Design • Branding",
     description: "Portfolio digital para fotógrafo com galeria imersiva.",
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop",
-    tags: ["Three.js", "WebGL", "CSS"],
+    tags: ["Web Design", "Branding", "UX"],
   },
 ];
 
