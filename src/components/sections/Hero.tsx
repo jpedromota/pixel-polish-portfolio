@@ -87,9 +87,9 @@ export const Hero = () => {
               className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t border-border/50"
             >
               {[
-                { value: "50+", label: "Projetos Entregues" },
+                { value: "30+", label: "Projetos Entregues" },
                 { value: "98%", label: "Clientes Satisfeitos" },
-                { value: "5+", label: "Anos de Experiência" },
+                { value: "2+", label: "Anos de Experiência" },
               ].map((stat) => (
                 <div key={stat.label} className="text-left">
                   <div className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-gradient">
