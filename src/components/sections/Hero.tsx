@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Elements */}
+      {/* Elementos de Fundo */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
       </div>
 
-      {/* Grid Pattern */}
+      {/* Padrão de Grid */}
       <div 
         className="absolute inset-0 opacity-[0.02]"
         style={{
@@ -23,7 +23,7 @@ export const Hero = () => {
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-start">
           
-          {/* Text Block - Left aligned for scanability */}
+          {/* Bloco de Texto - Alinhado à esquerda para melhor leitura */}
           <div className="max-w-3xl text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export const Hero = () => {
               </a>
             </motion.div>
 
-            {/* Stats */}
+            {/* Estatísticas */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Indicador de Scroll */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
