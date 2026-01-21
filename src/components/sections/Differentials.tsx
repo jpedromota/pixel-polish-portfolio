@@ -15,9 +15,9 @@ const differentials = [
   },
   {
     icon: Lightbulb,
-    title: "Design com Intencionalidade",
+    title: "Design Intencional",
     description:
-      "Cada pixel tem um propósito. Design estratégico focado em resultados mensuráveis.",
+      "Cada pixel tem um propósito. Estética funcional focada em resultados mensuráveis.",
     points: [
       "Hierarquia visual clara",
       "UX orientada por dados",

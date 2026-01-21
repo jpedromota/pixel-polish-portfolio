@@ -56,7 +56,7 @@ export const Footer = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span>contato@devstudio.com</span>
+                  <span>contato@joaopedromota.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 text-primary" />
@@ -161,7 +161,7 @@ export const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
             <p>
               © {new Date().getFullYear()}{" "}
-              <span className="text-gradient font-semibold">devstudio</span>. Todos
+              <span className="text-gradient font-semibold">João Pedro Mota</span>. Todos
               os direitos reservados.
             </p>
             <div className="flex items-center gap-6">

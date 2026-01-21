@@ -18,17 +18,17 @@ const services = [
   },
   {
     icon: Film,
-    title: "Motion Graphics",
+    title: "Motion Design",
     description:
       "Animações e micro-interações que trazem vida às interfaces, criando experiências mais envolventes e dinâmicas.",
-    features: ["Animações CSS/JS", "Transições", "Efeitos Visuais"],
+    features: ["Animações", "Transições", "Efeitos Visuais"],
   },
   {
     icon: Code,
-    title: "Desenvolvimento Frontend",
+    title: "Implementação Web",
     description:
-      "Código limpo, performático e escalável utilizando as tecnologias mais modernas do mercado.",
-    features: ["React/Next.js", "TypeScript", "Tailwind CSS"],
+      "Design implementado com performance e organização, garantindo que sua interface funcione perfeitamente.",
+    features: ["Performance", "Responsividade", "Otimização"],
   },
 ];
 
