@@ -26,7 +26,7 @@ export const Hero = () => {
           <div className="hidden lg:block lg:w-1/3" />
           
           {/* Text Block - Right aligned */}
-          <div className="max-w-2xl lg:w-2/3 text-left lg:text-right">
+          <div className="max-w-2xl lg:w-2/3 text-left lg:text-left">">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -40,10 +40,13 @@ export const Hero = () => {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight mb-4"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4"
+>
+  Design Estratégico para marcas que entendem que aparecer é comum, mas se conectar é essencial.
+</motion.h1>
             >
               <span className="text-gradient">Design Estratégico</span> para marcas
               {" "}que entendem que aparecer é comum,
