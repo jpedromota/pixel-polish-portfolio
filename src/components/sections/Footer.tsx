@@ -1,178 +1,74 @@
-import { useState } from "react";
-import { Send, Linkedin, Github, Instagram, Mail, MapPin } from "lucide-react";
-import { MotionWrapper } from "@/components/ui/motion-wrapper";
-import { toast } from "@/hooks/use-toast";
-
-const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-];
+import { Github, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
 
 export const Footer = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entrarei em contato em breve.",
-    });
-    setFormData({ name: "", email: "", message: "" });
-  };
-
   return (
-    <footer id="contato" className="relative bg-card border-t border-border">
-      {/* Contact Section */}
-      <div className="container mx-auto px-6 py-24">
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Left - Info */}
-          <div>
-            <MotionWrapper>
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">
-                Contato
-              </span>
-            </MotionWrapper>
-
-            <MotionWrapper delay={0.1}>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6">
-                Vamos criar algo{" "}
-                <span className="text-gradient">incrível juntos?</span>
-              </h2>
-            </MotionWrapper>
-
-            <MotionWrapper delay={0.2}>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Tem um projeto em mente? Adoraria ouvir sobre ele. Vamos conversar
-                sobre como posso ajudar a transformar sua visão em realidade.
-              </p>
-            </MotionWrapper>
-
-            <MotionWrapper delay={0.3}>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 text-muted-foreground">
-                  <Mail className="w-5 h-5 text-primary" />
-                  <span>jpedromota.7@gmail.com</span>
-                </div>
-                <div className="flex items-center gap-3 text-muted-foreground">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span>Juiz de Fora - MG, Brasil</span>
-                </div>
-              </div>
-            </MotionWrapper>
-
-            <MotionWrapper delay={0.4}>
-              <div className="flex items-center gap-4 mt-8">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
-            </MotionWrapper>
-          </div>
-
-          {/* Right - Form */}
-          <MotionWrapper delay={0.2}>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
-                    Nome
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground placeholder:text-muted-foreground"
-                    placeholder="Seu nome"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground placeholder:text-muted-foreground"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-foreground mb-2"
-                >
-                  Mensagem
-                </label>
-                <textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-xl bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none text-foreground placeholder:text-muted-foreground"
-                  placeholder="Conte-me sobre seu projeto..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 font-medium bg-gradient-accent text-primary-foreground rounded-full hover:opacity-90 transition-all shadow-glow"
-              >
-                Enviar Mensagem
-                <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </form>
-          </MotionWrapper>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-border">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <p>
-              © {new Date().getFullYear()}{" "}
-              <span className="text-gradient font-semibold">João Pedro Mota</span>. Todos
-              os direitos reservados.
+    <footer className="bg-secondary/30 border-t border-border pt-20 pb-10">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div className="col-span-1 md:col-span-2">
+            <a href="/" className="text-2xl font-display font-bold text-gradient mb-6 block">
+              João Pedro
+            </a>
+            <p className="text-muted-foreground max-w-sm mb-8">
+              Design Estratégico para marcas que buscam conexão, autoridade e refinamento técnico.
             </p>
-            <div className="flex items-center gap-6">
-              <a href="#" className="hover:text-foreground transition-colors">
-                Política de Privacidade
+            <div className="flex gap-4">
+              <a 
+                href="https://www.instagram.com/SEU_USER_AQUI" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary transition-colors text-muted-foreground hover:text-primary"
+              >
+                <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-foreground transition-colors">
-                Termos de Uso
+              <a 
+                href="https://www.linkedin.com/in/joão-pedro-mota-56082a345/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary transition-colors text-muted-foreground hover:text-primary"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://github.com/jpedromota" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary transition-colors text-muted-foreground hover:text-primary"
+              >
+                <Github className="w-5 h-5" />
               </a>
             </div>
           </div>
+
+          <div>
+            <h4 className="font-display font-semibold mb-6">Contato</h4>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <Mail className="w-4 h-4 text-primary" />
+                <a href="mailto:jpedromota.7@gmail.com" className="hover:text-primary transition-colors">
+                  jpedromota.7@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span>Juiz de Fora - MG, Brasil</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-display font-semibold mb-6">Navegação</h4>
+            <ul className="space-y-4 text-muted-foreground">
+              <li><a href="#sobre" className="hover:text-primary transition-colors">Sobre</a></li>
+              <li><a href="#servicos" className="hover:text-primary transition-colors">Serviços</a></li>
+              <li><a href="#projetos" className="hover:text-primary transition-colors">Portfólio</a></li>
+              <li><a href="#contato" className="hover:text-primary transition-colors">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
+          <p>© {new Date().getFullYear()} João Pedro. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
