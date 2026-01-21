@@ -21,12 +21,10 @@ export const Hero = () => {
       />
 
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-end">
-          {/* Spacer for left side on large screens */}
-          <div className="hidden lg:block lg:w-1/3" />
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-start">
           
-          {/* Text Block - Right aligned */}
-          <div className="max-w-2xl lg:w-2/3 text-left lg:text-left">">
+          {/* Text Block - Left aligned for scanability */}
+          <div className="max-w-3xl text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -40,24 +38,19 @@ export const Hero = () => {
             </motion.div>
 
             <motion.h1
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.3 }}
-  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4"
->
-  Design Estratégico para marcas que entendem que aparecer é comum, mas se conectar é essencial.
-</motion.h1>
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6"
             >
-              <span className="text-gradient">Design Estratégico</span> para marcas
-              {" "}que entendem que aparecer é comum,
-              {" "}mas se conectar é essencial.
+              <span className="text-gradient">Design Estratégico</span> para marcas que entendem que aparecer é comum, mas se conectar é essencial.
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-base md:text-lg text-muted-foreground/80 max-w-xl lg:ml-auto mb-8 leading-relaxed"
+              className="text-base md:text-lg text-muted-foreground/80 max-w-xl mb-8 leading-relaxed"
             >
               Transformando ideias em experiências memoráveis através de um{" "}
               <span className="text-muted-foreground">design estratégico</span>, focado em{" "}
@@ -69,7 +62,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row items-start lg:items-end lg:justify-end gap-4"
+              className="flex flex-col sm:flex-row items-start gap-4"
             >
               <a
                 href="#projetos"
@@ -98,7 +91,7 @@ export const Hero = () => {
                 { value: "98%", label: "Clientes Satisfeitos" },
                 { value: "5+", label: "Anos de Experiência" },
               ].map((stat) => (
-                <div key={stat.label} className="text-center lg:text-right">
+                <div key={stat.label} className="text-left">
                   <div className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-gradient">
                     {stat.value}
                   </div>
