@@ -1,99 +1,72 @@
-import { Monitor, Rocket, Code } from "lucide-react";
-import { MotionWrapper, MotionStagger, MotionItem } from "@/components/ui/motion-wrapper";
+import { motion } from "framer-motion";
+import { 
+  Layout, 
+  Smartphone, 
+  Search, 
+  Code, 
+  BarChart, 
+  PlayCircle // Certifique-se de que este ícone está aqui
+} from "lucide-react";
 
 const services = [
   {
-    icon: Monitor,
-    title: "Web Design & Landing Pages",
-    description:
-      "Interfaces estratégicas e páginas de alta conversão que capturam a essência da sua marca e transformam visitantes em clientes.",
-    features: ["UI/UX Design", "Alta Conversão", "Design Systems"],
+    title: "Web Design Estratégico",
+    description: "Criação de interfaces modernas e intuitivas focadas em conversão e experiência do usuário.",
+    icon: <Layout className="w-6 h-6 text-primary" />,
   },
   {
-    icon: Rocket,
-    title: "Social Media & Artes Estáticas",
-    description:
-      "Identidade visual consistente para suas redes sociais, com artes que comunicam e engajam seu público de forma autêntica.",
-    features: ["Feed Design", "Stories", "Carrosséis"],
+    title: "Social Media Design",
+    description: "Artes estáticas e carrosséis estratégicos para construir autoridade e engajamento no Instagram.",
+    icon: <Smartphone className="w-6 h-6 text-primary" />,
   },
-  {const services = [
-  // ... outros serviços que já estão lá (Web Design, Social Media, etc)
   {
-    icon: Motion Design,
     title: "Motion Design",
     description: "Animações impactantes que prendem a atenção e comunicam sua mensagem com dinamismo.",
     icon: <PlayCircle className="w-6 h-6 text-primary" />,
   },
-    {
-    icon: Code,
-    title: "Performance & Vibe Coding",
-    description:
-      "Código limpo e organizado como diferencial de bastidor, garantindo que seu design funcione com velocidade e precisão técnica.",
-    features: ["Performance", "Responsividade", "Otimização"],
+  {
+    title: "SEO e Performance",
+    description: "Otimização técnica para que seu site seja encontrado e carregue instantaneamente.",
+    icon: <Search className="w-6 h-6 text-primary" />,
   },
+  {
+    title: "Desenvolvimento Clean Code",
+    description: "Sites construídos com as tecnologias mais modernas e código limpo para fácil manutenção.",
+    icon: <Code className="w-6 h-6 text-primary" />,
+  },
+  {
+    title: "Análise de Métricas",
+    description: "Acompanhamento de resultados e dashboards mensais para otimizar sua estratégia digital.",
+    icon: <BarChart className="w-6 h-6 text-primary" />,
+  }
 ];
 
 export const Services = () => {
   return (
-    <section id="servicos" className="py-24 md:py-32 relative bg-secondary/20">
+    <section id="servicos" className="py-24 bg-secondary/10">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <MotionWrapper>
-            <span className="text-primary text-sm font-medium tracking-wider uppercase">
-              Serviços
-            </span>
-          </MotionWrapper>
-
-          <MotionWrapper delay={0.1}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6">
-              Soluções completas para sua{" "}
-              <span className="text-gradient">presença digital</span>
-            </h2>
-          </MotionWrapper>
-
-          <MotionWrapper delay={0.2}>
-            <p className="text-muted-foreground text-lg">
-              Do conceito ao código final, ofereço um pacote completo de serviços
-              para elevar sua presença online ao próximo nível.
-            </p>
-          </MotionWrapper>
+        <div className="max-w-3xl mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Soluções Digitais</h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Ofereço serviços integrados para marcas que buscam excelência visual e resultados estratégicos.
+          </p>
         </div>
 
-        <MotionStagger className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <MotionItem key={service.title}>
-              <div className="group relative h-full p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-500 overflow-hidden hover-lift">
-                {/* Gradient Overlay on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-accent flex items-center justify-center mb-6 shadow-glow">
-                    <service.icon className="w-7 h-7 text-primary-foreground" />
-                  </div>
-
-                  <h3 className="text-xl font-display font-bold text-foreground mb-3">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {service.features.map((feature) => (
-                      <span
-                        key={feature}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-muted-foreground"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </MotionItem>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="p-8 rounded-2xl bg-background border border-border hover:border-primary/50 transition-colors group"
+            >
+              <div className="mb-6 group-hover:scale-110 transition-transform">{service.icon}</div>
+              <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">{service.description}</p>
+            </motion.div>
           ))}
-        </MotionStagger>
+        </div>
       </div>
     </section>
   );
