@@ -1,94 +1,56 @@
-import { Code2, Palette, Target, Zap } from "lucide-react";
-import { MotionWrapper, MotionStagger, MotionItem } from "@/components/ui/motion-wrapper";
+import { motion } from "framer-motion";
+import { Shield, Zap, Target, Layout } from "lucide-react";
 
-const highlights = [
+const differentials = [
   {
-    icon: Palette,
     title: "Design Estratégico",
-    description: "Cada elemento tem um propósito estratégico",
+    description: "Criação visual com propósito, focada em comunicar a autoridade da sua marca.",
+    icon: <Shield className="w-6 h-6 text-primary" />,
   },
   {
-    icon: Code2,
     title: "Performance Garantida",
-    description: "Interfaces rápidas e bem estruturadas",
+    description: "Sites rápidos e otimizados para proporcionar a melhor experiência ao usuário.",
+    icon: <Zap className="w-6 h-6 text-primary" />,
   },
   {
-    icon: Target,
     title: "Foco em Resultados",
-    description: "Métricas e conversões como prioridade",
+    description: "Projetos desenvolvidos para converter visitantes em clientes reais.",
+    icon: <Target className="w-6 h-6 text-primary" />,
   },
   {
-    icon: Zap,
     title: "Experiência Fluida",
-    description: "UX otimizada para engajamento",
-  },
+    description: "Navegação intuitiva que guia o usuário de forma natural pelo conteúdo.",
+    icon: <Layout className="w-6 h-6 text-primary" />,
+  }
 ];
 
 export const About = () => {
   return (
-    <section id="sobre" className="py-24 md:py-32 relative">
+    <section id="sobre" className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
-          <div>
-            <MotionWrapper>
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">
-                Sobre Mim
-              </span>
-            </MotionWrapper>
+        <div className="max-w-4xl mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Sobre o Trabalho</h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Meu trabalho une a sensibilidade e a estratégia do design à experiência do usuário. 
+            Foco em criar interfaces que não apenas pareçam boas, mas que funcionem como ferramentas 
+            de conversão para o seu negócio.
+          </p>
+        </div>
 
-            <MotionWrapper delay={0.1}>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 leading-tight">
-                Criando experiências digitais{" "}
-                <span className="text-gradient">memoráveis</span>
-              </h2>
-            </MotionWrapper>
-
-            <MotionWrapper delay={0.2}>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Meu trabalho une a sensibilidade, a estratégia e a agilidade do
-                Social Media à precisão do "Vibe Coding". Mais do que entregar
-                apenas arquivos, foco em construir um ecossistema visual
-                completo e funcional para o seu negócio.
-              </p>
-            </MotionWrapper>
-
-            <MotionWrapper delay={0.3}>
-              <p className="text-muted-foreground leading-relaxed mb-8 font-medium text-foreground/80">
-                Deixar seu projeto na mão de quem não entende essa integração é
-                um risco que seu negócio não precisa correr.
-              </p>
-            </MotionWrapper>
-
-            <MotionWrapper delay={0.4}>
-              <a
-                href="#contato"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-              >
-                Vamos conversar sobre seu projeto
-                <span className="text-lg">→</span>
-              </a>
-            </MotionWrapper>
-          </div>
-
-          {/* Right Content - Highlights Grid */}
-          <MotionStagger className="grid sm:grid-cols-2 gap-4">
-            {highlights.map((item) => (
-              <MotionItem key={item.title} className="h-full">
-                <div className="group h-full min-h-[160px] p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover-lift flex flex-col">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-display font-semibold text-foreground mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground flex-grow">
-                    {item.description}
-                  </p>
-                </div>
-              </MotionItem>
-            ))}
-          </MotionStagger>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {differentials.map((diff, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="p-8 rounded-2xl bg-secondary/30 border border-border flex flex-col h-full"
+            >
+              <div className="mb-4">{diff.icon}</div>
+              <h3 className="text-xl font-display font-semibold mb-3">{diff.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{diff.description}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
