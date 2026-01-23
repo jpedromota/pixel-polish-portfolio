@@ -6,28 +6,28 @@ const projects = [
     title: "Social Media Posts",
     description: "Design focado em conversão, autoridade e engajamento para marcas que buscam se destacar no digital.",
     category: "Social Media",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=800",
   },
   {
     id: "motion-design",
     title: "Motion Design",
     description: "Animações dinâmicas e vídeos curtos que capturam a atenção e dão vida à identidade da marca.",
     category: "Motion",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=800",
   },
   {
     id: "landing-pages",
     title: "Landing Pages",
     description: "Páginas de alta conversão para marcas de produtos premium, focadas em transformar visitantes em clientes.",
     category: "Web Design",
-    image: "https://images.unsplash.com/photo-1581291518137-9759e6912384?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80&w=800",
   },
   {
     id: "dashboards",
     title: "Dashboards Mensais",
     description: "Envio de relatórios e dashboards mensais para analisar o desempenho das métricas e ajustar a estratégia.",
     category: "Estratégia",
-    image: "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
   },
 ];
 
