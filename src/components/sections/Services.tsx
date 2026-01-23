@@ -16,7 +16,15 @@ const services = [
       "Identidade visual consistente para suas redes sociais, com artes que comunicam e engajam seu público de forma autêntica.",
     features: ["Feed Design", "Stories", "Carrosséis"],
   },
+  {const services = [
+  // ... outros serviços que já estão lá (Web Design, Social Media, etc)
   {
+    icon: Motion Design,
+    title: "Motion Design",
+    description: "Animações impactantes que prendem a atenção e comunicam sua mensagem com dinamismo.",
+    icon: <PlayCircle className="w-6 h-6 text-primary" />,
+  },
+    {
     icon: Code,
     title: "Performance & Vibe Coding",
     description:
