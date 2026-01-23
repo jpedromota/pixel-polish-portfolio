@@ -1,7 +1,6 @@
-import { ExternalLink, Github } from "lucide-react";
-import { MotionWrapper, MotionStagger, MotionItem } from "@/components/ui/motion-wrapper";
+import { motion } from "framer-motion";
 
-const const projects = [
+const projects = [
   {
     title: "Social Media Posts",
     description: "Design focado em conversão, autoridade e engajamento para marcas que buscam se destacar no digital.",
@@ -30,91 +29,43 @@ const const projects = [
 
 export const Portfolio = () => {
   return (
-    <section id="projetos" className="py-24 md:py-32 relative">
+    <section id="projetos" className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <MotionWrapper>
-            <span className="text-primary text-sm font-medium tracking-wider uppercase">
-              Portfólio
-            </span>
-          </MotionWrapper>
-
-          <MotionWrapper delay={0.1}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6">
-              Projetos que{" "}
-              <span className="text-gradient">geram resultados</span>
-            </h2>
-          </MotionWrapper>
-
-          <MotionWrapper delay={0.2}>
-            <p className="text-muted-foreground text-lg">
-              Uma seleção de trabalhos que demonstram minha abordagem estratégica
-              e atenção aos detalhes.
-            </p>
-          </MotionWrapper>
+        <div className="max-w-3xl mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Portfólio</h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Uma seleção de projetos que unem estratégia, design e performance.
+          </p>
         </div>
 
-        <MotionStagger className="grid md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <MotionItem key={project.id}>
-              <div className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 hover-lift">
-                {/* Image Container */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60" />
-
-                  {/* Hover Actions */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="p-3 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform shadow-glow">
-                      <ExternalLink className="w-5 h-5" />
-                    </button>
-                    <button className="p-3 rounded-full bg-secondary text-foreground hover:scale-110 transition-transform">
-                      <Github className="w-5 h-5" />
-                    </button>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <span className="text-xs text-primary font-medium uppercase tracking-wider">
-                    {project.category}
-                  </span>
-                  <h3 className="text-xl font-display font-bold text-foreground mt-2 mb-2 group-hover:text-gradient transition-all">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 text-xs rounded-md bg-secondary/50 text-muted-foreground"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="group relative overflow-hidden rounded-2xl bg-secondary/30 border border-border"
+            >
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
               </div>
-            </MotionItem>
+              <div className="p-8">
+                <span className="text-xs font-medium uppercase tracking-wider text-primary mb-3 block">
+                  {project.category}
+                </span>
+                <h3 className="text-2xl font-display font-bold mb-3">{project.title}</h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {project.description}
+                </p>
+              </div>
+            </motion.div>
           ))}
-        </MotionStagger>
-
-        <MotionWrapper delay={0.4} className="text-center mt-12">
-          <a
-            href="#contato"
-            className="inline-flex items-center gap-2 px-8 py-4 font-medium border border-border rounded-full hover:bg-secondary/50 transition-colors"
-          >
-            Ver todos os projetos
-            <span>→</span>
-          </a>
-        </MotionWrapper>
+        </div>
       </div>
     </section>
   );
