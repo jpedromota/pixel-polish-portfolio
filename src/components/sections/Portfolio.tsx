@@ -1,39 +1,31 @@
 import { ExternalLink, Github } from "lucide-react";
 import { MotionWrapper, MotionStagger, MotionItem } from "@/components/ui/motion-wrapper";
 
-const projects = [
+const const projects = [
   {
-    id: "ecommerce-premium",
-    title: "E-commerce Premium",
-    category: "Landing Page • Conversão",
-    description: "Loja virtual de alta conversão para marca de produtos premium.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    tags: ["Web Design", "UX", "Conversão"],
+    title: "Social Media Posts",
+    description: "Design focado em conversão, autoridade e engajamento para marcas que buscam se destacar no digital.",
+    category: "Social Media",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
   },
   {
-    id: "saas-marketing",
-    title: "SaaS Marketing",
-    category: "Landing Page • Motion",
-    description: "Página de vendas animada com storytelling visual impactante.",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop",
-    tags: ["Motion Design", "UX", "Animações"],
+    title: "Motion Design",
+    description: "Animações dinâmicas e vídeos curtos que capturam a atenção e dão vida à identidade da marca.",
+    category: "Motion",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
   },
   {
-    id: "portfolio-criativo",
-    title: "Portfolio Criativo",
-    category: "Web Design • Branding",
-    description: "Portfolio digital para fotógrafo com galeria imersiva.",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop",
-    tags: ["Web Design", "Branding", "UX"],
+    title: "Landing Pages",
+    description: "Páginas de alta conversão para marcas de produtos premium, focadas em transformar visitantes em clientes.",
+    category: "Web Design",
+    image: "https://images.unsplash.com/photo-1581291518137-9759e6912384?auto=format&fit=crop&q=80&w=800",
   },
   {
-    id: "dashboards-mensais",
     title: "Dashboards Mensais",
-    category: "Relatórios • Analytics",
     description: "Envio de relatórios e dashboards mensais para analisar o desempenho das métricas, identificando o que funcionou e o que precisa de ajustes na estratégia.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    tags: ["Data Viz", "Relatórios", "Métricas"],
-  },
+    category: "Estratégia",
+    image: "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?auto=format&fit=crop&q=80&w=800",
+  }
 ];
 
 export const Portfolio = () => {
