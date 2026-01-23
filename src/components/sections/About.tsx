@@ -29,11 +29,13 @@ export const About = () => {
     <section id="sobre" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Sobre o Trabalho</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Estratégia e Design</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Meu trabalho une a sensibilidade e a estratégia do design à experiência do usuário. 
             Foco em criar interfaces que não apenas pareçam boas, mas que funcionem como ferramentas 
-            de conversão para o seu negócio.
+            de conversão para o seu negócio. Cada projeto é desenvolvido com atenção aos detalhes, 
+            desde a concepção visual até a implementação técnica, garantindo que sua marca 
+            comunique autoridade e conquiste resultados reais no ambiente digital.
           </p>
         </div>
 
