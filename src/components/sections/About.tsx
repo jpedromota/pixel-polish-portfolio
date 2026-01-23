@@ -21,7 +21,7 @@ const differentials = [
     title: "Experiência Fluida",
     description: "Navegação intuitiva que guia o usuário de forma natural pelo conteúdo.",
     icon: <Layout className="w-6 h-6 text-primary" />,
-  }
+  },
 ];
 
 export const About = () => {
@@ -44,11 +44,11 @@ export const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="p-8 rounded-2xl bg-secondary/30 border border-border flex flex-col h-full"
+              className="p-8 rounded-2xl bg-secondary/30 border border-border flex flex-col h-full min-h-[220px]"
             >
-              <div className="mb-4">{diff.icon}</div>
-              <h3 className="text-xl font-display font-semibold mb-3">{diff.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{diff.description}</p>
+              <div className="mb-4 flex-shrink-0">{diff.icon}</div>
+              <h3 className="text-xl font-display font-semibold mb-3 flex-shrink-0">{diff.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed flex-grow">{diff.description}</p>
             </motion.div>
           ))}
         </div>
