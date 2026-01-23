@@ -2,29 +2,33 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    id: "social-media",
     title: "Social Media Posts",
     description: "Design focado em conversão, autoridade e engajamento para marcas que buscam se destacar no digital.",
     category: "Social Media",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
   },
   {
+    id: "motion-design",
     title: "Motion Design",
     description: "Animações dinâmicas e vídeos curtos que capturam a atenção e dão vida à identidade da marca.",
     category: "Motion",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
   },
   {
+    id: "landing-pages",
     title: "Landing Pages",
     description: "Páginas de alta conversão para marcas de produtos premium, focadas em transformar visitantes em clientes.",
     category: "Web Design",
     image: "https://images.unsplash.com/photo-1581291518137-9759e6912384?auto=format&fit=crop&q=80&w=800",
   },
   {
+    id: "dashboards",
     title: "Dashboards Mensais",
-    description: "Envio de relatórios e dashboards mensais para analisar o desempenho das métricas, identificando o que funcionou e o que precisa de ajustes na estratégia.",
+    description: "Envio de relatórios e dashboards mensais para analisar o desempenho das métricas e ajustar a estratégia.",
     category: "Estratégia",
     image: "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?auto=format&fit=crop&q=80&w=800",
-  }
+  },
 ];
 
 export const Portfolio = () => {
@@ -41,17 +45,19 @@ export const Portfolio = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               className="group relative overflow-hidden rounded-2xl bg-secondary/30 border border-border"
             >
               <div className="aspect-video overflow-hidden">
+                {/* Imagem placeholder - substitua por suas artes reais */}
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
                 />
               </div>
               <div className="p-8">
