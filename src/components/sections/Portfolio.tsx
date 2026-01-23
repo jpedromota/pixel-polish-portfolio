@@ -3,13 +3,7 @@ import { MotionWrapper, MotionStagger, MotionItem } from "@/components/ui/motion
 
 const projects = [
   {
-    title: "Fintech Dashboard",
-    category: "Web Design • UI/UX",
-    description: "Dashboard moderno para gestão financeira com visualizações de dados interativas.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    tags: ["UI Design", "UX", "Data Viz"],
-  },
-  {
+    id: "ecommerce-premium",
     title: "E-commerce Premium",
     category: "Landing Page • Conversão",
     description: "Loja virtual de alta conversão para marca de produtos premium.",
@@ -17,6 +11,7 @@ const projects = [
     tags: ["Web Design", "UX", "Conversão"],
   },
   {
+    id: "saas-marketing",
     title: "SaaS Marketing",
     category: "Landing Page • Motion",
     description: "Página de vendas animada com storytelling visual impactante.",
@@ -24,11 +19,20 @@ const projects = [
     tags: ["Motion Design", "UX", "Animações"],
   },
   {
+    id: "portfolio-criativo",
     title: "Portfolio Criativo",
     category: "Web Design • Branding",
     description: "Portfolio digital para fotógrafo com galeria imersiva.",
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop",
     tags: ["Web Design", "Branding", "UX"],
+  },
+  {
+    id: "dashboards-mensais",
+    title: "Dashboards Mensais",
+    category: "Relatórios • Analytics",
+    description: "Envio de relatórios e dashboards mensais para analisar o desempenho das métricas, identificando o que funcionou e o que precisa de ajustes na estratégia.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    tags: ["Data Viz", "Relatórios", "Métricas"],
   },
 ];
 
@@ -60,7 +64,7 @@ export const Portfolio = () => {
 
         <MotionStagger className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <MotionItem key={project.title}>
+            <MotionItem key={project.id}>
               <div className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 hover-lift">
                 {/* Image Container */}
                 <div className="relative aspect-[4/3] overflow-hidden">
