@@ -5,7 +5,7 @@ import {
   Search, 
   Code, 
   BarChart, 
-  PlayCircle // Certifique-se de que este ícone está aqui
+  PlayCircle 
 } from "lucide-react";
 
 const services = [
